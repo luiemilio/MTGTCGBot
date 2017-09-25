@@ -1,8 +1,9 @@
 require 'byebug'
 require 'mtg_sdk'
 require 'telegram/bot'
+require_relative 'token'
 
-token = '359393659:AAE_ViulqkbZIpjPtB9jMVsBdBKZgVO1OsY'
+token = Token::KEY
 
 def get_cards(search_term)
   cards = MTG::Card.where(name: search_term).all
